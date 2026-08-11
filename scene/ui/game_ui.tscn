@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bjbwylk2huwq5"]
+
+[ext_resource type="FontFile" uid="uid://c20ekffvwqhtc" path="res://assets/font/BitPap.ttf" id="1_8ccno"]
+[ext_resource type="Script" uid="uid://b26dfigcdrjyn" path="res://scene/ui/game_ui.gd" id="1_xneuj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ucit4"]
+font = ExtResource("1_8ccno")
+font_size = 32
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="GameUI" type="CanvasLayer" unique_id=2072077401]
+script = ExtResource("1_xneuj")
+
+[node name="ScorePanel" type="Panel" parent="." unique_id=126944526]
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 148.0
+offset_bottom = 77.0
+
+[node name="ScoreLabel" type="Label" parent="ScorePanel" unique_id=1086881514]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_ucit4")
+horizontal_alignment = 1
+vertical_alignment = 1

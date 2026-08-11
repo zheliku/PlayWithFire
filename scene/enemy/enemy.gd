@@ -16,3 +16,7 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		var player := body as Player
 		player.kill()
+
+func kill() -> void:
+	Global.score += 1
+	self.queue_free()

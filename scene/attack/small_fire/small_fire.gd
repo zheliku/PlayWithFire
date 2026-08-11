@@ -13,15 +13,18 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if current_seconds >= burn_seconds:
+		current_seconds = burn_seconds
 		self.queue_free()
-		
-	current_seconds += delta
-	remain_seconds.text = "%0.1f" % (burn_seconds - current_seconds)
+		return
+	else:
+		current_seconds += delta
+		remain_seconds.text = "%0.1f" % (burn_seconds - current_seconds)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemy"):
 		print("Small fire hit enemy: ", body.name)
-		body.queue_free()
+		var enemy := body as Enemy
+		enemy.kill()
 		self.queue_free()
 	elif body.is_in_group("Player"):
 		print("Small fire hit player: ", body.name)
