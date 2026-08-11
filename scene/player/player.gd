@@ -1,13 +1,21 @@
 extends CharacterBody2D
 
+class_name Player
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+static var default: Player = null
 
+@export var speed = 300.0
+
+func _init() -> void:
+	default = self
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("left", "right", "up", "down")
 	print(direction)
-	velocity = direction * SPEED
+	velocity = direction * speed
 
 	move_and_slide()
+
+func _exit_tree() -> void:
+	if default == self:
+		default = null

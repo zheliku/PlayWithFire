@@ -2,11 +2,70 @@
 
 [ext_resource type="Script" uid="uid://ck3ybogi4pe1t" path="res://scene/game/game.gd" id="1_vasa2"]
 [ext_resource type="PackedScene" uid="uid://ctxpuynacpqxk" path="res://scene/player/player.tscn" id="2_vasa2"]
-[ext_resource type="Script" uid="uid://doab3sq3wj63d" path="res://scene/player/player.gd" id="3_l2vx3"]
+[ext_resource type="Script" uid="uid://bnfudt1otauau" path="res://scene/game/enemy_generator.gd" id="3_l2vx3"]
 
 [node name="Game" type="Node2D" unique_id=1871521129]
 script = ExtResource("1_vasa2")
 
 [node name="Player" parent="." unique_id=589269185 instance=ExtResource("2_vasa2")]
 position = Vector2(554, 304)
+
+[node name="EnemyGenerator" type="Node2D" parent="." unique_id=976454315]
 script = ExtResource("3_l2vx3")
+
+[node name="Marker2D" type="Marker2D" parent="EnemyGenerator" unique_id=1644142644]
+position = Vector2(19, -86)
+
+[node name="Marker2D2" type="Marker2D" parent="EnemyGenerator" unique_id=1481220802]
+position = Vector2(293, -84)
+
+[node name="Marker2D3" type="Marker2D" parent="EnemyGenerator" unique_id=1116268871]
+position = Vector2(539, -90)
+
+[node name="Marker2D4" type="Marker2D" parent="EnemyGenerator" unique_id=1140031396]
+position = Vector2(784, -84)
+
+[node name="Marker2D5" type="Marker2D" parent="EnemyGenerator" unique_id=1674308285]
+position = Vector2(1038, -86)
+
+[node name="Marker2D6" type="Marker2D" parent="EnemyGenerator" unique_id=78791448]
+position = Vector2(1239, -94)
+
+[node name="Marker2D7" type="Marker2D" parent="EnemyGenerator" unique_id=1515166854]
+position = Vector2(1258, 112)
+
+[node name="Marker2D8" type="Marker2D" parent="EnemyGenerator" unique_id=683720573]
+position = Vector2(1264, 321)
+
+[node name="Marker2D9" type="Marker2D" parent="EnemyGenerator" unique_id=1994055275]
+position = Vector2(1264, 524)
+
+[node name="Marker2D10" type="Marker2D" parent="EnemyGenerator" unique_id=1204664353]
+position = Vector2(1267, 744)
+
+[node name="Marker2D11" type="Marker2D" parent="EnemyGenerator" unique_id=1720580036]
+position = Vector2(1055, 777)
+
+[node name="Marker2D12" type="Marker2D" parent="EnemyGenerator" unique_id=2000046759]
+position = Vector2(765, 779)
+
+[node name="Marker2D13" type="Marker2D" parent="EnemyGenerator" unique_id=1363141000]
+position = Vector2(461, 774)
+
+[node name="Marker2D14" type="Marker2D" parent="EnemyGenerator" unique_id=1757017503]
+position = Vector2(127, 778)
+
+[node name="Marker2D15" type="Marker2D" parent="EnemyGenerator" unique_id=1936985542]
+position = Vector2(-112, 780)
+
+[node name="Marker2D16" type="Marker2D" parent="EnemyGenerator" unique_id=899874290]
+position = Vector2(-134, 560)
+
+[node name="Marker2D17" type="Marker2D" parent="EnemyGenerator" unique_id=1790431114]
+position = Vector2(-142, 353)
+
+[node name="Marker2D18" type="Marker2D" parent="EnemyGenerator" unique_id=1164066103]
+position = Vector2(-145, 133)
+
+[node name="Marker2D19" type="Marker2D" parent="EnemyGenerator" unique_id=1144421522]
+position = Vector2(-137, -67)
