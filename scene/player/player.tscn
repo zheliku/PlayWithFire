@@ -4,14 +4,28 @@
 [ext_resource type="Texture2D" uid="uid://l7cnotm0l8nh" path="res://scene/player/Player.png" id="1_obar5"]
 [ext_resource type="AudioStream" uid="uid://d2848l7hj1if1" path="res://scene/enemy/Die.wav" id="3_6smn3"]
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mgide"]
+polygon = PackedVector2Array(22.205544, -9.276199, 28.205544, -26.2762, 24.205544, -42.2762, 11.2055435, -51.2762, -4.7944565, -53.2762, -17.794456, -48.2762, -25.794456, -35.2762, -26.794456, -16.2762, -19.794456, -5.2761993, 1.2055435, 0.72380066)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ucit4"]
 radius = 34.0
 
 [node name="Player" type="CharacterBody2D" unique_id=589269185 groups=["Player"]]
 script = ExtResource("1_cm2cf")
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1175904661]
+position = Vector2(-0.20554352, 26.2762)
+occluder = SubResource("OccluderPolygon2D_mgide")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=827893380]
 scale = Vector2(5, 5)
+texture = ExtResource("1_obar5")
+
+[node name="Shadow" type="Sprite2D" parent="Sprite2D" unique_id=1761788304]
+self_modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+position = Vector2(0, 7.2)
+scale = Vector2(1, 0.18)
 texture = ExtResource("1_obar5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1859175312]

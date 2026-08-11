@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 		var small_fire := Game.default.small_fire_scene.instantiate() as Node2D
 		small_fire.global_position = get_global_mouse_position()
 		small_fire.show()
-		get_tree().get_root().add_child(small_fire)
+		Game.default.add_child(small_fire)
 
 func _physics_process(delta: float) -> void:
 	if not Global.running:
@@ -53,5 +53,6 @@ func kill() -> void:
 	sprite_2d.scale.y = 1
 	collision_shape_2d.queue_free()
 	die_sfx_player.play()
+	Game.default.music_player.stop()
 
 	get_tree().create_timer(0.75).timeout.connect(Global.game_over)

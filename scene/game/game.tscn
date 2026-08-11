@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ctxpuynacpqxk" path="res://scene/player/player.tscn" id="2_vasa2"]
 [ext_resource type="Script" uid="uid://bnfudt1otauau" path="res://scene/game/enemy_generator.gd" id="3_l2vx3"]
 [ext_resource type="PackedScene" uid="uid://bjbwylk2huwq5" path="res://scene/ui/game_ui.tscn" id="4_82mss"]
+[ext_resource type="AudioStream" uid="uid://b52ih64fvgtxs" path="res://assets/audio/Game.ogg" id="7_5nn1g"]
 
 [node name="Game" type="Node2D" unique_id=1871521129]
 script = ExtResource("1_vasa2")
@@ -83,3 +84,9 @@ position = Vector2(-145, 133)
 position = Vector2(-137, -67)
 
 [node name="GameUI" parent="." unique_id=2072077401 instance=ExtResource("4_82mss")]
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=157629716]
+position = Vector2(569, 336)
+stream = ExtResource("7_5nn1g")
+volume_db = -5.178
+autoplay = true

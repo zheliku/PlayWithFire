@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://clqukheh248yy" path="res://Art/Enemy.png" id="1_yijav"]
 [ext_resource type="AudioStream" uid="uid://d2848l7hj1if1" path="res://scene/enemy/Die.wav" id="3_msiye"]
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ucit4"]
+polygon = PackedVector2Array(27, 24, 0, -22, -26, 23)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ucit4"]
 radius = 29.0
 
@@ -13,9 +16,19 @@ radius = 43.046486
 [node name="Enemy" type="CharacterBody2D" unique_id=1212548110 groups=["Enemy"]]
 script = ExtResource("1_nytjq")
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1571896279]
+occluder = SubResource("OccluderPolygon2D_ucit4")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1056780998]
 scale = Vector2(5, 5)
 texture = ExtResource("1_yijav")
+
+[node name="ColorRect" type="ColorRect" parent="Sprite2D" unique_id=533895204]
+offset_left = -6.0
+offset_top = 6.25
+offset_right = 6.25
+offset_bottom = 8.25
+color = Color(0, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1833045203]
 position = Vector2(0, 8)

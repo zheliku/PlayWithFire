@@ -21,4 +21,4 @@ func _process(delta: float) -> void:
 		var marker2D = enemy_gen_positions.pick_random() as Marker2D
 		enemy.global_position = marker2D.global_position
 		enemy.show()
-		get_tree().get_root().add_child(enemy)
+		Game.default.add_child(enemy)
