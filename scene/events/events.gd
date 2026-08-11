@@ -1,3 +1,4 @@
 extends Node
 
 signal on_score_changed
+signal on_best_score_changed

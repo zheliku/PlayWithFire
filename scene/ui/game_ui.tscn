@@ -14,17 +14,24 @@ script = ExtResource("1_xneuj")
 [node name="ScorePanel" type="Panel" parent="." unique_id=126944526]
 offset_left = 25.0
 offset_top = 25.0
-offset_right = 148.0
+offset_right = 311.0
 offset_bottom = 77.0
 
 [node name="ScoreLabel" type="Label" parent="ScorePanel" unique_id=1086881514]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_right = 119.0
+offset_bottom = 52.0
 text = "Score: 0"
+label_settings = SubResource("LabelSettings_ucit4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BestLabel" type="Label" parent="ScorePanel" unique_id=1598709566]
+layout_mode = 0
+offset_left = 145.0
+offset_right = 264.0
+offset_bottom = 52.0
+text = "Best: 0"
 label_settings = SubResource("LabelSettings_ucit4")
 horizontal_alignment = 1
 vertical_alignment = 1
