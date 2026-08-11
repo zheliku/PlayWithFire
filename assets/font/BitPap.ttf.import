@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c20ekffvwqhtc"
-path="res://.godot/imported/BitPap.ttf-19c1247ad8ae10673160d1c275801c35.fontdata"
+path="res://.godot/imported/BitPap.ttf-ac0355f587f9291b6b1a1811f79ceb75.fontdata"
 
 [deps]
 
-source_file="res://Art/BitPap.ttf"
-dest_files=["res://.godot/imported/BitPap.ttf-19c1247ad8ae10673160d1c275801c35.fontdata"]
+source_file="res://assets/font/BitPap.ttf"
+dest_files=["res://.godot/imported/BitPap.ttf-ac0355f587f9291b6b1a1811f79ceb75.fontdata"]
 
 [params]
 

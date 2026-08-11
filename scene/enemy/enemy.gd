@@ -14,4 +14,5 @@ func _physics_process(delta: float) -> void:
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	print("Enemy hit by: ", body.name)
 	if body.is_in_group("Player"):
-		get_tree().reload_current_scene()
+		var player := body as Player
+		player.kill()

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bn1pq2srixl6q"]
+
+[ext_resource type="SpriteFrames" uid="uid://l0sa7yyx5d77" path="res://scene/attack/small_fire/small_fire.tres" id="1_2kv1g"]
+[ext_resource type="Script" uid="uid://bwrv3qvy1rrdy" path="res://scene/attack/small_fire/small_fire.gd" id="1_o8821"]
+[ext_resource type="FontFile" uid="uid://c20ekffvwqhtc" path="res://assets/font/BitPap.ttf" id="3_g4px8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucit4"]
+size = Vector2(25, 65)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ucit4"]
+font = ExtResource("3_g4px8")
+font_size = 32
+shadow_color = Color(0.15294118, 0.15294118, 0.45490196, 1)
+
+[node name="SmallFire" type="Area2D" unique_id=1207578852]
+script = ExtResource("1_o8821")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=892302961]
+position = Vector2(0, -50)
+scale = Vector2(5, 5)
+sprite_frames = ExtResource("1_2kv1g")
+autoplay = "default"
+frame = 2
+frame_progress = 0.76024723
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1190652144]
+position = Vector2(2.5, -32.5)
+shape = SubResource("RectangleShape2D_ucit4")
+
+[node name="RemainSeconds" type="Label" parent="." unique_id=1412820717]
+offset_left = -20.0
+offset_top = -107.0
+offset_right = 20.0
+offset_bottom = -75.0
+text = "2.0"
+label_settings = SubResource("LabelSettings_ucit4")
+horizontal_alignment = 1
+vertical_alignment = 1

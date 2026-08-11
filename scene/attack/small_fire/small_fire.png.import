@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7yyefdwr6ty"
-path="res://.godot/imported/small_fire.png-f667b5d2aa0d1895789b8b8de83056b9.ctex"
+path="res://.godot/imported/small_fire.png-18e9a01a032d9072a81ceea24365e4b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/small_fire.png"
-dest_files=["res://.godot/imported/small_fire.png-f667b5d2aa0d1895789b8b8de83056b9.ctex"]
+source_file="res://scene/attack/small_fire/small_fire.png"
+dest_files=["res://.godot/imported/small_fire.png-18e9a01a032d9072a81ceea24365e4b2.ctex"]
 
 [params]
 
