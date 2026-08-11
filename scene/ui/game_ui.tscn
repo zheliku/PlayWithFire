@@ -2,11 +2,24 @@
 
 [ext_resource type="FontFile" uid="uid://c20ekffvwqhtc" path="res://assets/font/BitPap.ttf" id="1_8ccno"]
 [ext_resource type="Script" uid="uid://b26dfigcdrjyn" path="res://scene/ui/game_ui.gd" id="1_xneuj"]
+[ext_resource type="Script" uid="uid://dg5x4xcutco6r" path="res://scene/ui/game_over.gd" id="3_5ty5x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ucit4"]
 font = ExtResource("1_8ccno")
 font_size = 32
 shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mgide"]
+font = ExtResource("1_8ccno")
+font_size = 64
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xneuj"]
+font = ExtResource("1_8ccno")
+font_size = 32
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(4, 4)
 
 [node name="GameUI" type="CanvasLayer" unique_id=2072077401]
 script = ExtResource("1_xneuj")
@@ -35,3 +48,54 @@ text = "Best: 0"
 label_settings = SubResource("LabelSettings_ucit4")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="GameOver" type="Panel" parent="." unique_id=1385538037]
+visible = false
+offset_left = 214.0
+offset_top = 132.0
+offset_right = 934.0
+offset_bottom = 500.0
+script = ExtResource("3_5ty5x")
+
+[node name="Title" type="Label" parent="GameOver" unique_id=1476616674]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 60.0
+offset_right = 481.0
+offset_bottom = 124.0
+text = "Game Over"
+label_settings = SubResource("LabelSettings_mgide")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Current" type="Label" parent="GameOver" unique_id=102254155]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 151.0
+offset_right = 481.0
+offset_bottom = 215.0
+text = "Current: 10000"
+label_settings = SubResource("LabelSettings_xneuj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Best" type="Label" parent="GameOver" unique_id=1888581462]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 215.0
+offset_right = 481.0
+offset_bottom = 279.0
+text = "Best: 10000"
+label_settings = SubResource("LabelSettings_xneuj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="GameOver" unique_id=1311433261]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 292.0
+offset_right = 415.0
+offset_bottom = 339.0
+theme_override_fonts/font = ExtResource("1_8ccno")
+theme_override_font_sizes/font_size = 32
+text = "Restart"

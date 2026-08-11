@@ -19,6 +19,8 @@ var best_score: int = 0:
     get:
         return best_score
 
+var running: bool = true
+
 func _ready() -> void:
     reset_data()
     load_best_score()
@@ -27,6 +29,15 @@ func _ready() -> void:
 
 func reset_data() -> void:
     score = 0
+
+func game_start() -> void:
+    running = true
+    Engine.time_scale = 1.0
+
+func game_over() -> void:
+    running = false
+    Engine.time_scale = 0.0
+    GameUI.default.game_over.show()
 
 func save_best_score() -> void:
     var file = ConfigFile.new()

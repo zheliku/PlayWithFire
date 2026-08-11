@@ -9,10 +9,14 @@ var current_duration: float = 0.0
 func _ready() -> void:
 	print("Hello PlayWithFire")
 	Global.reset_data()
+	Global.game_start()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if not Global.running:
+		return
+
 	current_duration += delta
 	if current_duration >= attack_duration and Input.is_action_pressed("fire"):
 		current_duration = 0.0

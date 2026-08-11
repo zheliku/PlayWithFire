@@ -10,6 +10,9 @@ func _init() -> void:
 	default = self
 
 func _physics_process(delta: float) -> void:
+	if not Global.running:
+		return
+
 	var direction := Input.get_vector("left", "right", "up", "down")
 	velocity = direction * speed
 
@@ -20,4 +23,4 @@ func _exit_tree() -> void:
 		default = null
 
 func kill() -> void:
-	get_tree().reload_current_scene()
+	Global.game_over()
