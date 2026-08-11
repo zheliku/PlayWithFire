@@ -3,6 +3,7 @@
 [ext_resource type="SpriteFrames" uid="uid://l0sa7yyx5d77" path="res://scene/attack/small_fire/small_fire.tres" id="1_2kv1g"]
 [ext_resource type="Script" uid="uid://bwrv3qvy1rrdy" path="res://scene/attack/small_fire/small_fire.gd" id="1_o8821"]
 [ext_resource type="FontFile" uid="uid://c20ekffvwqhtc" path="res://assets/font/BitPap.ttf" id="3_g4px8"]
+[ext_resource type="AudioStream" uid="uid://d3upwdf0iu0jy" path="res://scene/attack/small_fire/Fire.wav" id="4_lioam"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ucit4"]
 size = Vector2(25, 65)
@@ -36,3 +37,7 @@ text = "2.0"
 label_settings = SubResource("LabelSettings_ucit4")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=345865467]
+stream = ExtResource("4_lioam")
+autoplay = true

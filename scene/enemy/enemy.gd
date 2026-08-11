@@ -3,8 +3,20 @@ extends CharacterBody2D
 class_name Enemy
 
 @export var speed = 100.0
+@onready var die_sfx_player: AudioStreamPlayer2D = $DieSfxPlayer
+@onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+@onready var hit_box: Area2D = $HitBox
+
+var died: bool = false
 
 func _physics_process(delta: float) -> void:
+	if died:
+		return
+	
+	if Player.default == null:
+		return
+
 	var direction_to_player := position.direction_to(Player.default.position)
 	velocity = direction_to_player * speed
 
@@ -19,4 +31,12 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 
 func kill() -> void:
 	Global.score += 1
-	self.queue_free()
+	Game.default.camera_2d.shake(10)
+
+	died = true
+	die_sfx_player.play()
+	sprite_2d.scale.y = 1
+	collision_shape_2d.queue_free()
+	hit_box.queue_free()
+
+	get_tree().create_timer(0.75).timeout.connect(self.queue_free)

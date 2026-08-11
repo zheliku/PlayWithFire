@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://doab3sq3wj63d" path="res://scene/player/player.gd" id="1_cm2cf"]
 [ext_resource type="Texture2D" uid="uid://l7cnotm0l8nh" path="res://scene/player/Player.png" id="1_obar5"]
+[ext_resource type="AudioStream" uid="uid://d2848l7hj1if1" path="res://scene/enemy/Die.wav" id="3_6smn3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ucit4"]
 radius = 34.0
@@ -15,3 +16,6 @@ texture = ExtResource("1_obar5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1859175312]
 shape = SubResource("CircleShape2D_ucit4")
+
+[node name="DieSfxPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1385234058]
+stream = ExtResource("3_6smn3")

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ccpi28rfijgry" path="res://scene/enemy/enemy.gd" id="1_nytjq"]
 [ext_resource type="Texture2D" uid="uid://clqukheh248yy" path="res://Art/Enemy.png" id="1_yijav"]
+[ext_resource type="AudioStream" uid="uid://d2848l7hj1if1" path="res://scene/enemy/Die.wav" id="3_msiye"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ucit4"]
 radius = 29.0
@@ -25,5 +26,8 @@ shape = SubResource("CircleShape2D_ucit4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=752538798]
 position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_mgide")
+
+[node name="DieSfxPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1079090173]
+stream = ExtResource("3_msiye")
 
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

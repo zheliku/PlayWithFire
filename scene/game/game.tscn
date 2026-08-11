@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bvx1eujiv2wcp"]
 
 [ext_resource type="Script" uid="uid://ck3ybogi4pe1t" path="res://scene/game/game.gd" id="1_vasa2"]
+[ext_resource type="Script" uid="uid://cuewen7snobyh" path="res://scene/game/camera_controller.gd" id="2_0tn4t"]
 [ext_resource type="Texture2D" uid="uid://bjejmq1lcvkyp" path="res://assets/sprite/Background.png" id="2_tr56l"]
 [ext_resource type="PackedScene" uid="uid://ctxpuynacpqxk" path="res://scene/player/player.tscn" id="2_vasa2"]
 [ext_resource type="Script" uid="uid://bnfudt1otauau" path="res://scene/game/enemy_generator.gd" id="3_l2vx3"]
@@ -8,6 +9,10 @@
 
 [node name="Game" type="Node2D" unique_id=1871521129]
 script = ExtResource("1_vasa2")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1345126691]
+position = Vector2(576, 324)
+script = ExtResource("2_0tn4t")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1618945363]
 position = Vector2(575.5, 324)

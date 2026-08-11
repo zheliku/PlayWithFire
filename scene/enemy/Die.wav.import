@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://d3upwdf0iu0jy"
-path="res://.godot/imported/Fire.wav-7eea7d27000f5c0163d604625e37b974.sample"
+uid="uid://d2848l7hj1if1"
+path="res://.godot/imported/Die.wav-aff4d34850daac1ad8da48c48644db37.sample"
 
 [deps]
 
-source_file="res://Art/Fire.wav"
-dest_files=["res://.godot/imported/Fire.wav-7eea7d27000f5c0163d604625e37b974.sample"]
+source_file="res://scene/enemy/Die.wav"
+dest_files=["res://.godot/imported/Die.wav-aff4d34850daac1ad8da48c48644db37.sample"]
 
 [params]
 
