@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq2hxtycgf4tb"
-path="res://.godot/imported/big_fire.png-120978e83c8b2cc169bd4958a76f604b.ctex"
+uid="uid://d3ko1ekv5ggic"
+path="res://.godot/imported/PowerUpBigFire.png-5a77dbbf8195e1f6830a051d611d2bf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/big_fire.png"
-dest_files=["res://.godot/imported/big_fire.png-120978e83c8b2cc169bd4958a76f604b.ctex"]
+source_file="res://scene/power_up/PowerUpBigFire.png"
+dest_files=["res://.godot/imported/PowerUpBigFire.png-5a77dbbf8195e1f6830a051d611d2bf7.ctex"]
 
 [params]
 

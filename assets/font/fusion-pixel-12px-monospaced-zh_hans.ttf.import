@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dfnen06s7mnk4"
-path="res://.godot/imported/fusion-pixel-12px-monospaced-zh_hans.ttf-3ab5b21736b83a7001a3db59da64022c.fontdata"
+path="res://.godot/imported/fusion-pixel-12px-monospaced-zh_hans.ttf-6e447e8a2d88585e31497c088bc9ec3b.fontdata"
 
 [deps]
 
-source_file="res://Art/fusion-pixel-12px-monospaced-zh_hans.ttf"
-dest_files=["res://.godot/imported/fusion-pixel-12px-monospaced-zh_hans.ttf-3ab5b21736b83a7001a3db59da64022c.fontdata"]
+source_file="res://assets/font/fusion-pixel-12px-monospaced-zh_hans.ttf"
+dest_files=["res://.godot/imported/fusion-pixel-12px-monospaced-zh_hans.ttf-6e447e8a2d88585e31497c088bc9ec3b.fontdata"]
 
 [params]
 

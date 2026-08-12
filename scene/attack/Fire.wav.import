@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d3upwdf0iu0jy"
-path="res://.godot/imported/Fire.wav-f257cd83fa85ebb0c7936110caf1bcca.sample"
+path="res://.godot/imported/Fire.wav-e5ff7247dae2d965e87ff242efe39a50.sample"
 
 [deps]
 
-source_file="res://scene/attack/small_fire/Fire.wav"
-dest_files=["res://.godot/imported/Fire.wav-f257cd83fa85ebb0c7936110caf1bcca.sample"]
+source_file="res://scene/attack/Fire.wav"
+dest_files=["res://.godot/imported/Fire.wav-e5ff7247dae2d965e87ff242efe39a50.sample"]
 
 [params]
 

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ckdeh1r74320"]
 
 [ext_resource type="Script" uid="uid://cnhuqj1u4eha8" path="res://scene/power_up/power_up_longer_fire.gd" id="1_lldsc"]
-[ext_resource type="Texture2D" uid="uid://dwj4e1lwba514" path="res://Art/PowerUpLongerFire.png" id="2_t6sbm"]
-[ext_resource type="AudioStream" uid="uid://bic6th6i8y68x" path="res://Art/PowerUp.wav" id="3_t6sbm"]
+[ext_resource type="Texture2D" uid="uid://dwj4e1lwba514" path="res://scene/power_up/PowerUpLongerFire.png" id="2_t6sbm"]
+[ext_resource type="AudioStream" uid="uid://bic6th6i8y68x" path="res://assets/audio/PowerUp.wav" id="3_t6sbm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ucit4"]
 size = Vector2(64, 64)

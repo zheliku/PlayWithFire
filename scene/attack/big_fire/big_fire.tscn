@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cg8eq7ex01l4q"]
+
+[ext_resource type="SpriteFrames" uid="uid://ulht36cwi7q" path="res://scene/attack/big_fire/big_fire.tres" id="1_4y0p3"]
+[ext_resource type="Script" uid="uid://36wu6jq03j73" path="res://scene/attack/big_fire/big_fire.gd" id="1_gsnyh"]
+[ext_resource type="FontFile" uid="uid://c20ekffvwqhtc" path="res://assets/font/BitPap.ttf" id="3_vj8j7"]
+[ext_resource type="AudioStream" path="res://scene/attack/small_fire/Fire.wav" id="4_mr2x0"]
+
+[sub_resource type="Gradient" id="Gradient_lioam"]
+offsets = PackedFloat32Array(0, 0.997561)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fxmmf"]
+gradient = SubResource("Gradient_lioam")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.86, 0.17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucit4"]
+size = Vector2(65, 65)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3fkbb"]
+font = ExtResource("3_vj8j7")
+font_size = 32
+shadow_color = Color(0.15294118, 0.15294118, 0.45490196, 1)
+
+[node name="BigFire" type="Area2D" unique_id=1176655389]
+script = ExtResource("1_gsnyh")
+
+[node name="Light" type="PointLight2D" parent="." unique_id=1763280163]
+energy = 1.3
+blend_mode = 2
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_fxmmf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1712678320]
+position = Vector2(0, -80)
+scale = Vector2(5, 5)
+sprite_frames = ExtResource("1_4y0p3")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1293811209]
+position = Vector2(2.5, -32.5)
+shape = SubResource("RectangleShape2D_ucit4")
+
+[node name="RemainSeconds" type="Label" parent="." unique_id=458960808]
+offset_left = -20.0
+offset_top = -107.0
+offset_right = 20.0
+offset_bottom = -75.0
+text = "2.0"
+label_settings = SubResource("LabelSettings_3fkbb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1871081471]
+stream = ExtResource("4_mr2x0")
+autoplay = true

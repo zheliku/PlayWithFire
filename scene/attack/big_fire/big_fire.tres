@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://ulht36cwi7q"]
+
+[ext_resource type="Texture2D" uid="uid://cq2hxtycgf4tb" path="res://scene/attack/big_fire/big_fire.png" id="1_70cmr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iunv1"]
+atlas = ExtResource("1_70cmr")
+region = Rect2(0, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_es68v"]
+atlas = ExtResource("1_70cmr")
+region = Rect2(24, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lf0t"]
+atlas = ExtResource("1_70cmr")
+region = Rect2(48, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12ic5"]
+atlas = ExtResource("1_70cmr")
+region = Rect2(72, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dkv7"]
+atlas = ExtResource("1_70cmr")
+region = Rect2(96, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gotfj"]
+atlas = ExtResource("1_70cmr")
+region = Rect2(120, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5te8"]
+atlas = ExtResource("1_70cmr")
+region = Rect2(144, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tjd8"]
+atlas = ExtResource("1_70cmr")
+region = Rect2(168, 0, 24, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iunv1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_es68v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lf0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12ic5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dkv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gotfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5te8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tjd8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]

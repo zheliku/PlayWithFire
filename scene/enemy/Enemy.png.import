@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwj4e1lwba514"
-path="res://.godot/imported/PowerUpLongerFire.png-bb8d0ed7fc1053ae99b4216d62acb906.ctex"
+uid="uid://clqukheh248yy"
+path="res://.godot/imported/Enemy.png-89e8c73c02931d07d697940f8e708e57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/PowerUpLongerFire.png"
-dest_files=["res://.godot/imported/PowerUpLongerFire.png-bb8d0ed7fc1053ae99b4216d62acb906.ctex"]
+source_file="res://scene/enemy/Enemy.png"
+dest_files=["res://.godot/imported/Enemy.png-89e8c73c02931d07d697940f8e708e57.ctex"]
 
 [params]
 

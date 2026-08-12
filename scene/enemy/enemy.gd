@@ -4,6 +4,7 @@ class_name Enemy
 
 @export var speed = 100.0
 @export var power_up_longer_fire_scene: PackedScene
+@export var power_up_big_fire_scene: PackedScene
 
 @onready var die_sfx_player: AudioStreamPlayer2D = $DieSfxPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
@@ -52,6 +53,12 @@ func kill() -> void:
 
 	get_tree().create_timer(0.75).timeout.connect(self.queue_free)
 
-	var power_up_longer_fire := power_up_longer_fire_scene.instantiate() as Node2D
-	power_up_longer_fire.global_position = global_position
-	Game.default.call_deferred("add_child", power_up_longer_fire)
+	var random_value = randi() % 100
+	if random_value < 10:
+		var power_up_longer_fire := power_up_longer_fire_scene.instantiate() as Node2D
+		power_up_longer_fire.global_position = global_position
+		Game.default.call_deferred("add_child", power_up_longer_fire)
+	elif random_value < 80 and not Global.big_fire:
+		var power_up_big_fire := power_up_big_fire_scene.instantiate() as Node2D
+		power_up_big_fire.global_position = global_position
+		Game.default.call_deferred("add_child", power_up_big_fire)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cqx2hw27t1cte"]
 
 [ext_resource type="Material" uid="uid://uox7lvoalsi7" path="res://assets/material/burn_dissolve_material.tres" id="1_nq86b"]
-[ext_resource type="Texture2D" uid="uid://clqukheh248yy" path="res://Art/Enemy.png" id="1_o5qsg"]
+[ext_resource type="Texture2D" uid="uid://clqukheh248yy" path="res://scene/enemy/Enemy.png" id="1_o5qsg"]
 
 [node name="TestDissolveShader" type="Node2D" unique_id=1011246602]
 

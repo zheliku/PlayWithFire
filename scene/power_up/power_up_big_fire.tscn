@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://rnuok4ypj4sf"]
+
+[ext_resource type="Script" uid="uid://dp55xpgpkm8yb" path="res://scene/power_up/power_up_big_fire.gd" id="1_i41uw"]
+[ext_resource type="Texture2D" uid="uid://d3ko1ekv5ggic" path="res://scene/power_up/PowerUpBigFire.png" id="1_yta6u"]
+[ext_resource type="AudioStream" uid="uid://bic6th6i8y68x" path="res://assets/audio/PowerUp.wav" id="2_ubatu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucit4"]
+size = Vector2(64, 64)
+
+[node name="PowerUpBigFire" type="Area2D" unique_id=1949470061]
+script = ExtResource("1_i41uw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=567018508]
+scale = Vector2(4, 4)
+texture = ExtResource("1_yta6u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=940264362]
+shape = SubResource("RectangleShape2D_ucit4")
+
+[node name="Shadow" type="ColorRect" parent="." unique_id=1516668296]
+offset_left = -32.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="SfxPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1045286992]
+stream = ExtResource("2_ubatu")

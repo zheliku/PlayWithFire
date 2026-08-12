@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://l7cnotm0l8nh" path="res://scene/player/Player.png" id="1_obar5"]
 [ext_resource type="Material" uid="uid://uox7lvoalsi7" path="res://assets/material/burn_dissolve_material.tres" id="2_5lop3"]
 [ext_resource type="AudioStream" uid="uid://d2848l7hj1if1" path="res://scene/enemy/Die.wav" id="3_6smn3"]
-[ext_resource type="FontFile" uid="uid://dfnen06s7mnk4" path="res://Art/fusion-pixel-12px-monospaced-zh_hans.ttf" id="5_ajqqa"]
+[ext_resource type="FontFile" uid="uid://dfnen06s7mnk4" path="res://assets/font/fusion-pixel-12px-monospaced-zh_hans.ttf" id="5_ajqqa"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mgide"]
 polygon = PackedVector2Array(22.205544, -9.276199, 28.205544, -26.2762, 24.205544, -42.2762, 11.2055435, -51.2762, -4.7944565, -53.2762, -17.794456, -48.2762, -25.794456, -35.2762, -26.794456, -16.2762, -19.794456, -5.2761993, 1.2055435, 0.72380066)

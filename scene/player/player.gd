@@ -11,6 +11,8 @@ class_name Player
 static var default: Player = null
 
 @export var speed = 300.0
+@export var small_fire_scene: PackedScene = preload("res://scene/attack/small_fire/small_fire.tscn")
+@export var big_fire_scene: PackedScene = preload("res://scene/attack/big_fire/big_fire.tscn")
 
 var died: bool = false
 var attack_duration: float = 0.2
@@ -31,10 +33,16 @@ func _process(delta: float) -> void:
 	current_duration += delta
 	if current_duration >= attack_duration and Input.is_action_pressed("fire"):
 		current_duration = 0.0
-		var small_fire := Game.default.small_fire_scene.instantiate() as Node2D
-		small_fire.global_position = get_global_mouse_position()
-		small_fire.show()
-		Game.default.add_child(small_fire)
+		var fire = big_fire_scene.instantiate() as Node2D if Global.big_fire else small_fire_scene.instantiate() as Node2D
+
+		# var small_fire := small_fire_scene.instantiate() as Node2D
+		# small_fire.global_position = get_global_mouse_position()
+		# small_fire.show()
+		# Game.default.add_child(small_fire)
+
+		fire.global_position = get_global_mouse_position()
+		fire.show()
+		Game.default.add_child(fire)
 
 func _physics_process(delta: float) -> void:
 	if not Global.running:
