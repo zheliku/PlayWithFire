@@ -2,5 +2,17 @@
 
 [ext_resource type="Shader" uid="uid://0yl3hk1knu77" path="res://assets/material/burn_dissolve_shader.gdshader" id="1_2day6"]
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_b3tfy"]
+frequency = 0.25
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_r13xd"]
+width = 16
+height = 16
+noise = SubResource("FastNoiseLite_b3tfy")
+
 [resource]
 shader = ExtResource("1_2day6")
+shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_r13xd")
+shader_parameter/dissolve_value = 1.0
+shader_parameter/burn_size = 0.2999999932944
+shader_parameter/burn_color = Color(0.93333334, 0.4, 0, 1)

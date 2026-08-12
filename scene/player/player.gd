@@ -5,6 +5,7 @@ class_name Player
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var die_sfx_player: AudioStreamPlayer2D = $DieSfxPlayer
+@onready var shadow: Sprite2D = $Sprite2D/Shadow
 
 static var default: Player = null
 
@@ -48,9 +49,18 @@ func _exit_tree() -> void:
 	if default == self:
 		default = null
 
-func kill() -> void:
+func kill(by_fire = true) -> void:
 	died = true
 	sprite_2d.scale.y = 1
+
+	if by_fire:
+		var material_instance := sprite_2d.material.duplicate() as ShaderMaterial
+		sprite_2d.material = material_instance
+		create_tween().tween_method(func(v):
+			material_instance.set_shader_parameter("dissolve_value", v)
+		, 1.0, 0, 0.75)
+		create_tween().tween_property(shadow, "modulate", Color(0, 0, 0, 0), 0.75)
+
 	collision_shape_2d.queue_free()
 	die_sfx_player.play()
 	Game.default.music_player.stop()

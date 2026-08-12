@@ -7,6 +7,7 @@ class_name Enemy
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var hit_box: Area2D = $HitBox
+@onready var shadow: ColorRect = $Sprite2D/Shadow
 
 var died: bool = false
 
@@ -27,7 +28,7 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 	print("Enemy hit by: ", body.name)
 	if body.is_in_group("Player"):
 		var player := body as Player
-		player.kill()
+		player.kill(false)
 
 func kill() -> void:
 	Global.score += 1
@@ -36,6 +37,14 @@ func kill() -> void:
 	died = true
 	die_sfx_player.play()
 	sprite_2d.scale.y = 1
+
+	var material_instance := sprite_2d.material.duplicate() as ShaderMaterial
+	sprite_2d.material = material_instance
+	create_tween().tween_method(func(v):
+		material_instance.set_shader_parameter("dissolve_value", v)
+	, 1.0, 0, 0.75)
+	create_tween().tween_property(shadow, "modulate", Color(0, 0, 0, 0), 0.75)
+
 	collision_shape_2d.queue_free()
 	hit_box.queue_free()
 
