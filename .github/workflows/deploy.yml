@@ -23,6 +23,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Inject coi-serviceworker into index.html
+        run: |
+          if ! grep -q "coi-serviceworker.js" builds/index.html; then
+            sed -i 's|</title>|</title>\n\t\t<script src="coi-serviceworker.js"></script>|' builds/index.html
+            echo "Injected coi-serviceworker.js"
+          else
+            echo "coi-serviceworker.js already present, skipping"
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
