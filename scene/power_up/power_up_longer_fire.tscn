@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ckdeh1r74320"]
+
+[ext_resource type="Script" uid="uid://cnhuqj1u4eha8" path="res://scene/power_up/power_up_longer_fire.gd" id="1_lldsc"]
+[ext_resource type="Texture2D" uid="uid://dwj4e1lwba514" path="res://Art/PowerUpLongerFire.png" id="2_t6sbm"]
+[ext_resource type="AudioStream" uid="uid://bic6th6i8y68x" path="res://Art/PowerUp.wav" id="3_t6sbm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucit4"]
+size = Vector2(64, 64)
+
+[node name="PowerUpLongerFire" type="Area2D" unique_id=195908235]
+script = ExtResource("1_lldsc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=85991014]
+scale = Vector2(4, 4)
+texture = ExtResource("2_t6sbm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1010548240]
+shape = SubResource("RectangleShape2D_ucit4")
+
+[node name="Shadow" type="ColorRect" parent="." unique_id=1207548186]
+offset_left = -32.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="SfxPlayer" type="AudioStreamPlayer2D" parent="." unique_id=955290699]
+stream = ExtResource("3_t6sbm")

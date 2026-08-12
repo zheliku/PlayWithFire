@@ -3,6 +3,8 @@ extends CharacterBody2D
 class_name Enemy
 
 @export var speed = 100.0
+@export var power_up_longer_fire_scene: PackedScene
+
 @onready var die_sfx_player: AudioStreamPlayer2D = $DieSfxPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
@@ -49,3 +51,7 @@ func kill() -> void:
 	hit_box.queue_free()
 
 	get_tree().create_timer(0.75).timeout.connect(self.queue_free)
+
+	var power_up_longer_fire := power_up_longer_fire_scene.instantiate() as Node2D
+	power_up_longer_fire.global_position = global_position
+	Game.default.add_child(power_up_longer_fire)

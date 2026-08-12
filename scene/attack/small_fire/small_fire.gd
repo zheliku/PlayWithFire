@@ -3,8 +3,6 @@ extends Area2D
 @onready var remain_seconds: Label = $RemainSeconds
 
 var current_seconds: float = 0.0
-var burn_seconds: float = 1.0
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,13 +10,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if current_seconds >= burn_seconds:
-		current_seconds = burn_seconds
+	if current_seconds >= Global.fire_burn_seconds:
+		current_seconds = Global.fire_burn_seconds
 		self.queue_free()
 		return
 	else:
 		current_seconds += delta
-		remain_seconds.text = "%0.1f" % (burn_seconds - current_seconds)
+		remain_seconds.text = "%0.1f" % (Global.fire_burn_seconds - current_seconds)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemy"):

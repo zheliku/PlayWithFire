@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ccpi28rfijgry" path="res://scene/enemy/enemy.gd" id="1_nytjq"]
 [ext_resource type="Texture2D" uid="uid://clqukheh248yy" path="res://Art/Enemy.png" id="1_yijav"]
+[ext_resource type="PackedScene" uid="uid://ckdeh1r74320" path="res://scene/power_up/power_up_longer_fire.tscn" id="2_dd7y5"]
 [ext_resource type="Material" uid="uid://uox7lvoalsi7" path="res://assets/material/burn_dissolve_material.tres" id="2_tu2m7"]
 [ext_resource type="AudioStream" uid="uid://d2848l7hj1if1" path="res://scene/enemy/Die.wav" id="3_msiye"]
 
@@ -16,6 +17,7 @@ radius = 43.046486
 
 [node name="Enemy" type="CharacterBody2D" unique_id=1212548110 groups=["Enemy"]]
 script = ExtResource("1_nytjq")
+power_up_longer_fire_scene = ExtResource("2_dd7y5")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1571896279]
 occluder = SubResource("OccluderPolygon2D_ucit4")

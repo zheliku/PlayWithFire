@@ -20,6 +20,7 @@ var best_score: int = 0:
         return best_score
 
 var running: bool = true
+var fire_burn_seconds: float = 1.0
 
 func _ready() -> void:
     reset_data()
@@ -29,6 +30,7 @@ func _ready() -> void:
 
 func reset_data() -> void:
     score = 0
+    fire_burn_seconds = 1.0
 
 func game_start() -> void:
     running = true
