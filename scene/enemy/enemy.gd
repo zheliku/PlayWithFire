@@ -58,7 +58,7 @@ func kill() -> void:
 		var power_up_longer_fire := power_up_longer_fire_scene.instantiate() as Node2D
 		power_up_longer_fire.global_position = global_position
 		Game.default.call_deferred("add_child", power_up_longer_fire)
-	elif random_value < 80 and not Global.big_fire:
+	elif random_value < 20 and not Global.big_fire:
 		var power_up_big_fire := power_up_big_fire_scene.instantiate() as Node2D
 		power_up_big_fire.global_position = global_position
 		Game.default.call_deferred("add_child", power_up_big_fire)

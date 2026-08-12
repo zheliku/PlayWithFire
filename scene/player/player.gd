@@ -54,6 +54,17 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * speed
 
 	move_and_slide()
+	_clamp_to_viewport()
+
+func _clamp_to_viewport() -> void:
+	var camera := get_viewport().get_camera_2d()
+	if camera == null:
+		return
+	var half := get_viewport_rect().size / 2.0 / camera.zoom
+	var cam := camera.global_position
+	var r := 34.0  # 与 CollisionShape2D 的 radius 保持一致
+	position.x = clamp(position.x, cam.x - half.x + r, cam.x + half.x - r)
+	position.y = clamp(position.y, cam.y - half.y + r, cam.y + half.y - r)
 
 func _exit_tree() -> void:
 	if default == self:
