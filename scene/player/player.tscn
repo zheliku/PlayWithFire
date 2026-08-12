@@ -4,12 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://l7cnotm0l8nh" path="res://scene/player/Player.png" id="1_obar5"]
 [ext_resource type="Material" uid="uid://uox7lvoalsi7" path="res://assets/material/burn_dissolve_material.tres" id="2_5lop3"]
 [ext_resource type="AudioStream" uid="uid://d2848l7hj1if1" path="res://scene/enemy/Die.wav" id="3_6smn3"]
+[ext_resource type="FontFile" uid="uid://dfnen06s7mnk4" path="res://Art/fusion-pixel-12px-monospaced-zh_hans.ttf" id="5_ajqqa"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mgide"]
 polygon = PackedVector2Array(22.205544, -9.276199, 28.205544, -26.2762, 24.205544, -42.2762, 11.2055435, -51.2762, -4.7944565, -53.2762, -17.794456, -48.2762, -25.794456, -35.2762, -26.794456, -16.2762, -19.794456, -5.2761993, 1.2055435, 0.72380066)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ucit4"]
 radius = 34.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_ucit4"]
+font = ExtResource("5_ajqqa")
+font_size = 24
+shadow_color = Color(0.15294118, 0.15294118, 0.26666668, 1)
+shadow_offset = Vector2(2, 2)
 
 [node name="Player" type="CharacterBody2D" unique_id=589269185 groups=["Player"]]
 script = ExtResource("1_cm2cf")
@@ -35,3 +42,13 @@ shape = SubResource("CircleShape2D_ucit4")
 
 [node name="DieSfxPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1385234058]
 stream = ExtResource("3_6smn3")
+
+[node name="Message" type="Label" parent="." unique_id=2088641501]
+offset_left = -94.0
+offset_top = -99.0
+offset_right = 94.0
+offset_bottom = -42.0
+text = "燃烧时长+1"
+label_settings = SubResource("LabelSettings_ucit4")
+horizontal_alignment = 1
+vertical_alignment = 1

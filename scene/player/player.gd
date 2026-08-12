@@ -6,6 +6,7 @@ class_name Player
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var die_sfx_player: AudioStreamPlayer2D = $DieSfxPlayer
 @onready var shadow: Sprite2D = $Sprite2D/Shadow
+@onready var message: Label = $Message
 
 static var default: Player = null
 
@@ -18,6 +19,7 @@ var current_duration: float = 0.0
 func _ready() -> void:
 	default = self
 	died = false
+	message.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -48,6 +50,20 @@ func _physics_process(delta: float) -> void:
 func _exit_tree() -> void:
 	if default == self:
 		default = null
+
+func display_message(text: String) -> void:
+	var msg = message.duplicate() as Label
+	msg.global_position = message.global_position
+	msg.text = text
+	msg.show()
+	msg.modulate = Color.WHITE
+	Game.default.add_child(msg)
+
+	var tween := create_tween()
+	var to_pos = msg.global_position + Vector2.UP * 32
+	tween.tween_property(msg, "global_position", to_pos, 2.0)
+	tween.tween_property(msg, "modulate", Color(1, 1, 1, 0), 1.0)
+	tween.finished.connect(msg.queue_free)
 
 func kill(by_fire = true) -> void:
 	died = true

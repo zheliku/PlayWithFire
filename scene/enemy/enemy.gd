@@ -54,4 +54,4 @@ func kill() -> void:
 
 	var power_up_longer_fire := power_up_longer_fire_scene.instantiate() as Node2D
 	power_up_longer_fire.global_position = global_position
-	Game.default.add_child(power_up_longer_fire)
+	Game.default.call_deferred("add_child", power_up_longer_fire)
