@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://b52ih64fvgtxs" path="res://assets/audio/Game.ogg" id="7_5nn1g"]
 
 [node name="Game" type="Node2D" unique_id=1871521129]
+y_sort_enabled = true
 script = ExtResource("1_vasa2")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1345126691]
@@ -16,6 +17,7 @@ position = Vector2(576, 324)
 script = ExtResource("2_0tn4t")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1618945363]
+z_index = -99
 position = Vector2(575.5, 324)
 scale = Vector2(4.292592, 3.6111107)
 texture = ExtResource("2_tr56l")

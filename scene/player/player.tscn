@@ -19,6 +19,7 @@ shadow_color = Color(0.15294118, 0.15294118, 0.26666668, 1)
 shadow_offset = Vector2(2, 2)
 
 [node name="Player" type="CharacterBody2D" unique_id=589269185 groups=["Player"]]
+y_sort_enabled = true
 script = ExtResource("1_cm2cf")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1175904661]
